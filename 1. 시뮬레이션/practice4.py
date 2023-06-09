@@ -10,18 +10,15 @@ def solution(park, routes):
         for j in range(m):
             if park[i][j]=='S':
                 x,y=i,j
-    nx,ny=x,y
+    
     for tmp in routes:
         dir, dis = tmp.split(' ')
         flag=True
-        for i in range(1, int(dis)+1):
-            nx, ny = nx + dx[d[dir]], ny + dy[d[dir]]
-            if nx<0 or ny<0 or nx>=n or ny>=m or park[nx][ny]=='X':
+        for i in range(1, int(dis)+1): #String을 int로 cast
+            nx, ny = x + dx[d[dir]]*i, y + dy[d[dir]]*i
+            if nx<0 or ny<0 or nx>=n or ny>=n or park[nx][ny]=='X':
                 flag=False
                 break
         if flag:
-            x,y=nx,ny 
+            x,y=nx,ny
     return [x,y]
-
-print(solution(["SOO","OOO","OOO"],["E 2","S 2","W 1"]))
-print(solution(["SOO","OXX","OOO"],["E 2","S 2","W 1"]))

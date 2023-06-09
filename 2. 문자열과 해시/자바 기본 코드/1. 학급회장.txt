@@ -1,0 +1,15 @@
+import java.util.*;
+class Solution {
+	public char solution(String s){
+		char answer=' ';
+		
+		return answer;
+	}
+
+	public static void main(String[] args){
+		Solution T = new Solution();
+		System.out.println(T.solution("BACBACCACCBDEDE"));
+		System.out.println(T.solution("AAAAABBCCDDDD"));
+		System.out.println(T.solution("AABBCCDDEEABCB"));
+	}
+}
