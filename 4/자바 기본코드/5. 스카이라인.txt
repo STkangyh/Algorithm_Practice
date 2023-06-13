@@ -1,0 +1,19 @@
+import java.util.*;
+class Main {
+	public int solution(int[][] board){
+		int answer=0;
+		
+
+		return answer;
+	}
+
+	public static void main(String[] args){
+		Main T = new Main();
+		int[][] arr={{2, 5, 7, 3}, 
+			{6, 8, 9, 7}, 
+			{3, 2, 4, 5}, 
+			{7, 2, 5, 8}};
+		System.out.println(T.solution(arr));
+		
+	}
+}

@@ -1,0 +1,17 @@
+import java.util.*;
+class Solution {
+	public String solution(String s){
+		String answer = "";
+
+		return answer;
+	}
+
+	public static void main(String[] args){
+		Solution T = new Solution();
+		System.out.println(T.solution("acbbcaa"));	
+		System.out.println(T.solution("bacccaba"));	
+		System.out.println(T.solution("aabaababbaa"));	
+		System.out.println(T.solution("bcaacccbaabccabbaa"));	
+		System.out.println(T.solution("cacaabbc"));	
+	}
+}

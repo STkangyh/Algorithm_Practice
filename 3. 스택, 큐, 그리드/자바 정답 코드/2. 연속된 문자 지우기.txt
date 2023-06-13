@@ -1,0 +1,24 @@
+import java.util.*;
+class Solution {
+	public String solution(String s){
+		Stack<Character> stack = new Stack<>();
+		for(char x : s.toCharArray()){
+			if(!stack.isEmpty() && x == stack.peek()){
+				stack.pop();
+			}
+			else stack.push(x);
+		}
+		StringBuilder sb = new StringBuilder();
+		for(char x : stack) sb.append(x);
+		return sb.toString();
+	}
+
+	public static void main(String[] args){
+		Solution T = new Solution();
+		System.out.println(T.solution("acbbcaa"));	
+		System.out.println(T.solution("bacccaba"));	
+		System.out.println(T.solution("aabaababbaa"));	
+		System.out.println(T.solution("bcaacccbaabccabbaa"));	
+		System.out.println(T.solution("cacaabbc"));	
+	}
+}

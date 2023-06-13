@@ -1,0 +1,22 @@
+import java.util.*;
+class Solution {
+	public int solution(int[] nums, int k){
+		int answer = Arrays.stream(nums).reduce(0, (a, b)->a+b);
+		int m = nums.length-k;
+		int sum = 0;
+		for(int i = 0; i < m; i++) sum += nums[i];
+		int mins = sum;
+		for(int i = m; i < nums.length; i++){
+			sum += (nums[i] - nums[i-m]);
+			mins = Math.min(mins, sum);
+		}
+		return answer - mins;
+	}
+
+	public static void main(String[] args){
+		Solution T = new Solution();
+		int[] arr = new int[]{2, 3, 7, 1, 2, 1, 5};
+		System.out.println(T.solution(arr, 4));
+		
+	}
+}

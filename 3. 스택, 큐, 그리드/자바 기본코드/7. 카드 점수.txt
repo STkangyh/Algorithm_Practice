@@ -1,0 +1,15 @@
+import java.util.*;
+class Solution {
+	public int solution(int[] nums, int k){
+		int answer = 0;
+
+		return answer;
+	}
+
+	public static void main(String[] args){
+		Solution T = new Solution();
+		int[] arr = new int[]{2, 3, 7, 1, 2, 1, 5};
+		System.out.println(T.solution(arr, 4));
+		
+	}
+}
