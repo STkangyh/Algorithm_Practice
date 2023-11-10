@@ -10,4 +10,3 @@ def solution(name, yearning, photo):
             sum += sH[person]
         answer.append(sum)
     return answer
-
