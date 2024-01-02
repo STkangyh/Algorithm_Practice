@@ -14,6 +14,6 @@ for i in N:
         print(a)
         continue
     if b==0:
-        print(1)
+        print(1)    
     else:
         print(m[a][b%4-1])
