@@ -1,12 +1,17 @@
-import sys
-input = sys.stdin.readline
 from collections import deque
 
 q = deque()
 n = int(input())
+
 for i in range(n):
     q.append(i+1)
-while len(q)>1:
-    q.popleft()
+arr = []
+
+while q:
+    arr.append(q.popleft())
+    if not q:
+        break
     q.append(q.popleft())
-print(q.pop())
+    if not q:
+        break
+print(*arr)
